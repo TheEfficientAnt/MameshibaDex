@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mameshiba Dex</title>
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: url('https://i.pinimg.com/736x/b6/9a/13/b69a13c042374a898309bc79dbc43c4e.jpg') repeat;
+      background-size: auto;
+      color: #d36ba6;
+      font-family: 'Satisfy', cursive;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      background: url('https://i.pinimg.com/736x/c5/58/0d/c5580d92472551fe22d6f6915b31cee3.jpg') center/cover no-repeat;
+      border-bottom: 4px solid #ffcce0;
+      color: white;
+      text-shadow: 1px 1px 2px #00000066;
+    }
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #fffafa;
+    }
+    .intro button {
+      background-color: #d36ba6;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      font-family: 'Satisfy', cursive;
+    }
+    .pokedex-grid {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 2rem;
+    }
+    .character-card {
+      background: rgba(255, 240, 245, 0.7);
+      border: 3px solid #ffc0cb;
+      border-radius: 20px;
+      padding: 2rem;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(255, 182, 193, 0.4);
+      backdrop-filter: blur(10px);
+    }
+    .character-card img {
+      width: 160px;
+      height: 160px;
+      border-radius: 12px;
+    }
+    .character-card h2 {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+    .character-card p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+    .character-card em {
+      color: #a0527d;
+      font-style: normal;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mameshiba Dex</h1>
+  </header>
+
+  <div class="intro" id="intro">
+    <h2>Bienvenido a la Mameshiba Dex</h2>
+    <button onclick="startExperience()">Entrar</button>
+  </div>
+
+  <audio id="bg-audio" loop>
+    <source src="https://www.dropbox.com/scl/fi/tgxj7yhzv5m9w02xov5fg/mameshiba-theme-song-song-ver.-english-subbed.mp3?rlkey=cgodhb36smnc7nvxqo14yikpu&st=2qdyb90v&raw=1" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <main class="pokedex-grid" id="dex">
+    <div class="character-card">
+       <a href="https://www.youtube.com/watch?v=Ye4cFy1O5kg&ab_channel=wierdjapanesevids" target="_blank">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b300e0b3-a62d-4d28-a253-cc522576f8a5/d5lfx8c-4c2880c5-e5fe-48ed-b788-2ab796703be6.jpg/v1/fill/w_900,h_720,q_75,strp/peanut_mameshiba_by_suariel_d5lfx8c-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvYjMwMGUwYjMtYTYyZC00ZDI4LWEyNTMtY2M1MjI1NzZmOGE1XC9kNWxmeDhjLTRjMjg4MGM1LWU1ZmUtNDhlZC1iNzg4LTJhYjc5NjcwM2JlNi5qcGciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.s21ldNvWDANHI0YK77YQf7hqdH1aIpvKK9NnMyJI8Fs" alt="Peanut">
+  </a><h2>Peanut</h2>
+      <p><em>Type:</em> Legume</p>
+      <p><em>ATK:</em> 68 | <em>DEF:</em> 72</p>
+      <p><em>Special Ability:</em> Pensar fuera de la cáscara</p>
+      <p><em>Trivia:</em> Did you know, when you kiss 200 million germs are spread between the two mouths in a second.</p>
+    </div>
+    <div class="character-card">
+     <a href="https://www.youtube.com/watch?v=JVl73a6ThEI&ab_channel=Andieluca" target="_blank">
+    <img src="https://d1fwgdbfuvd4ew.cloudfront.net/wp-content/uploads/sites/2/2023/01/14ej31_mameshiba-thumb-765xauto-2385.jpg" alt="Tiger Bean">
+  </a><h2>Tiger Bean</h2>
+      <p><em>Type:</em> Feline</p>
+      <p><em>ATK:</em> 75 | <em>DEF:</em> 70</p>
+      <p><em>Special Ability:</em> Forgetful Kleptomania</p>
+      <p><em>Trivia:</em> A canary that can't sing will never find a mate.</p>
+    </div>
+<div class="character-card">
+  <a href="https://www.youtube.com/watch?v=IlLfN_MMzkA&ab_channel=amenov" target="_blank">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsFPXUf36Klxd42RJyDBwl0fcq9EeFQP_xPA&s" alt="Chili Bean">
+  </a>
+  <h2>Chili Bean</h2>
+  <p><em>Type:</em> Mexicano</p>
+  <p><em>ATK:</em> 80 | <em>DEF:</em> 65</p>
+  <p><em>Final Attack:</em> Factos Picantes</p>
+  <p><em>Trivia:</em> ¿Sabes que la vaca babea más de 100 litros por día?</p>
+</div>
+    <div class="character-card">
+  <a href="https://www.youtube.com/watch?v=3Cbiq2JtjBE&ab_channel=amenov" target="_blank">
+    <img src="https://i4.ytimg.com/vi/3Cbiq2JtjBE/mqdefault.jpg" alt="Boiled Bean">
+  </a>
+  <h2>Boiled Bean</h2>
+  <p><em>Type:</em> Boiled</p>
+  <p><em>ATK:</em> 62 | <em>DEF:</em> 78</p>
+  <p><em>Special Ability:</em> Soft-Hearted Boil</p>
+  <p><em>Trivia:</em> The lemurs on the island of Madagascar have two tongues.</p>
+</div>
+    <div class="character-card">
+  <a href="https://www.youtube.com/watch?v=eVXDxfyYlIA&ab_channel=amenov" target="_blank">
+    <img src="https://www.siliconera.com/wp-content/uploads/2011/05/mameshiba13.jpg" alt="Sword Bean">
+  </a>
+  <h2>Sword Bean</h2>
+  <p><em>Type:</em> Warrior</p>
+  <p><em>ATK:</em> 90 | <em>DEF:</em> 60</p>
+  <p><em>Special Ability:</em> Sword of Beanity</p>
+  <p><em>Trivia:</em> 「インドネシア語で「勉強」は「ブラジャー」って言うんだって。」<br>This joke plays on the similar sounds of "belajar" (study in Indonesian) and "burajaa" (bra in Japanese), making it funny only in Japanese.</p>
+</div>
+    <div class="character-card">
+  <a href="https://www.youtube.com/watch?v=kmLi9bwaW3I&ab_channel=Andieluca" target="_blank">
+    <img src="https://pbs.twimg.com/media/ElWHLohXEAEJweW.png" alt="Chickpea">
+  </a>
+  <h2>Chickpea</h2>
+  <p><em>Type:</em> Thoughtful</p>
+  <p><em>ATK:</em> 70 | <em>DEF:</em> 68</p>
+  <p><em>Special Ability:</em> Me, Myself, and Bean</p>
+  <p><em>Trivia:</em> Catfish has tastebuds all over their body.</p>
+</div>
+    <div class="character-card">
+  <a href="https://www.youtube.com/watch?v=BmjU2bNvEUI&ab_channel=amenov" target="_blank">
+    <img src="https://lovemameshiba.wordpress.com/wp-content/uploads/2011/06/chara_cashewnut.jpg" alt="Cashew Nut">
+  </a>
+  <h2>Cashew Nut</h2>
+  <p><em>Type:</em> Dry</p>
+  <p><em>ATK:</em> 76 | <em>DEF:</em> 74</p>
+  <p><em>Special Ability:</em> Nutruption</p>
+  <p><em>Trivia:</em> Female mantises eat male mantises.</p>
+</div>
+   <div class="character-card">
+  <a href="https://www.youtube.com/watch?v=Pmank2o4DOY&ab_channel=vizmedia" target="_blank">
+    <img src="https://i.ytimg.com/vi/oxcTcKEJkVg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB5soYTEUc58z9uh6RLPda5qvL3lw" alt="Edamame">
+  </a>
+  <h2>Edamame</h2>
+  <p><em>Type:</em> Fresh Green</p>
+  <p><em>ATK:</em> 66 | <em>DEF:</em> 77</p>
+  <p><em>Special Ability:</em> Green & Growing</p>
+  <p><em>Trivia:</em> Did you know that the inside of a kangaroo's pouch supposedly smells bad?</p>
+</div>
+    <div class="character-card">
+  <a href="https://www.youtube.com/watch?v=H8rKG2xILMg&ab_channel=AsamiFandub" target="_blank">
+    <img src="https://pbs.twimg.com/media/DyfV0WTXcAAfMRR.jpg" alt="Black Bean">
+  </a>
+  <h2>Black Bean</h2>
+  <p><em>Type:</em> Black</p>
+  <p><em>ATK:</em> 88 | <em>DEF:</em> 85</p>
+  <p><em>Special Ability:</em> Black Power</p>
+  <p><em>Trivia:</em> Did you know that a hippopotamus's sweat is pink?</p>
+</div>
+</main>
+  <script>
+    function startExperience() {
+      document.getElementById('intro').style.display = 'none';
+      document.getElementById('dex').style.display = 'flex';
+      document.getElementById('bg-audio').play();
+    }
+  </script>
+</body>
+</html>
+
